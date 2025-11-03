@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter un Livre</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="ajouter-livre.JS" defer></script>
+</head>
+<body>
+  <header>
+    <h2> Ajouter un nouveau livre</h2>
+  </header>
+
+  <main>
+    <form id="formLivre">
+      <fieldset>
+        <legend>Informations du livre</legend>
+
+        <label for="code">Code :</label>
+        <input type="number" id="code" required><br><br>
+
+        <label for="titre">Titre :</label>
+        <input type="text" id="titre" required><br><br>
+
+        <label for="auteur">Auteur :</label>
+        <input type="text" id="auteur" required><br><br>
+
+        <label for="annee">Année :</label>
+        <input type="number" id="annee" required><br><br>
+
+        <label for="prix">Prix (DH) :</label>
+        <input type="number" id="prix" required><br><br>
+
+        <label for="disponible">Disponible :</label>
+        <input type="checkbox" id="disponible" checked><br><br>
+
+        <button type="submit">Ajouter</button>
+      </fieldset>
+    </form>
+  </main>
+</body>
+</html>

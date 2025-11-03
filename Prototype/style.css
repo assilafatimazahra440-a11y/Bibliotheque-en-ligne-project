@@ -1,0 +1,109 @@
+body {
+    background-image: url('image/bibliotheque.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+     height: 200vh; 
+     background-color: #f8f5f0;
+    color: #3e2f20;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  } 
+  header {
+    background: linear-gradient(135deg, #d9c3a1, #f1e4c3);
+    text-align: center;
+    padding: 1.5em;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #c9a16e; 
+  } 
+
+  header h1 {
+    
+    letter-spacing: 2px;
+    color: #4a3520;
+    margin-bottom: 0.5em;
+  }
+  legend{
+    background-color:#b99665;
+    padding :8px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgb(75, 48, 5);
+    color: white;
+    font-weight: 600;
+  }
+  fieldset{
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  input, button {
+    font-size: 1em;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    border: 1px solid #cbb48d;
+    background: #fffaf3;
+    margin: 0.3em;
+    transition: 0.3s;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #b99665;
+    box-shadow: 0 0 5px rgba(185,150,101,0.4);
+  }
+
+  button {
+    background-color: #b99665;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #9c7e56;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  } 
+
+  main {
+    flex: 1;
+    padding: 2em;
+      display: flex;
+    justify-content: center;
+    
+  }
+
+    article {
+    background-color: #fffdf8;
+    border: 1px solid #e1d5c5;
+    border-radius: 16px;
+    padding: 1.5em;
+    margin-bottom: 10px;
+    width: 250px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+
+  article:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+
+  article h3 {
+    margin-top: 0;
+    color: #704b28;
+    border-bottom: 2px solid #e4d0b0;
+    padding-bottom: 5px;
+    font-family: "Georgia", serif;
+  }
+
+  footer {
+    background-color: #f1e4c3;
+    color: #4d3b24;
+    padding: 1em;
+    text-align: center;
+    border-top: 3px solid #c9a16e;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  } 

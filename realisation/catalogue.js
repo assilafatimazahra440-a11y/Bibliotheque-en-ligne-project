@@ -127,7 +127,7 @@ let bibliotheque = [
   // ===============================
   const btnAjouter = document.getElementById("btnAjouter");
   btnAjouter.addEventListener("click", () => {
-    window.open("ajouter.html", "", "width=400,height=400");
+    window.open("ajouter-livre.html", "", "width=400,height=700");
   });
   
   function fenetreAjouter(nouvLivre) {

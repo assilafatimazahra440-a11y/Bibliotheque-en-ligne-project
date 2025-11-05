@@ -3,9 +3,7 @@ let bibliotheque = [
     { code: 45, titre: "Eloquent JavaScript", auteur: "Marijn Haverbeke", annee: 2018, disponible: true, prix: 200 }
   ];
   
-  // ===============================
-  // 🔹 Afficher les livres
-  // ===============================
+  //  Afficher les livres
   function afficherLivres(liste = bibliotheque) {
     const section = document.getElementById("catalogue");
     section.innerHTML = ""; // vider la section avant d'afficher
@@ -32,15 +30,12 @@ let bibliotheque = [
   
     afficherStats();
   }
-  
-  // ===============================
-  // 🔹 Supprimer un livre
-  // ===============================
+  //  Supprimer un livre
   function supprimerLivre(code) {
     let nouvelleBibliotheque = [];
     let i = 0;
     while (i < bibliotheque.length) {
-      if (bibliotheque[i].code !== code) {
+      if (bibliotheque[i].code != code) {
         nouvelleBibliotheque.push(bibliotheque[i]);
       }
       i++;
@@ -49,13 +44,11 @@ let bibliotheque = [
     afficherLivres();
   }
   
-  // ===============================
-  // 🔹 Changer la disponibilité (emprunter/retourner)
-  // ===============================
+  //  Changer la disponibilité (emprunter/retourner)
   function changerDisponibilite(code) {
     let i = 0;
     while (i < bibliotheque.length) {
-      if (bibliotheque[i].code === code) {
+      if (bibliotheque[i].code == code) {
         bibliotheque[i].disponible = !bibliotheque[i].disponible;
         break; // on a trouvé le livre, on arrête la boucle
       }
@@ -63,10 +56,7 @@ let bibliotheque = [
     }
     afficherLivres();
   }
-  
-  // ===============================
-  // 🔹 Statistiques de base
-  // ===============================
+  //  Statistiques de base
   function afficherStats() {
     let total = bibliotheque.length;
   
@@ -107,10 +97,7 @@ let bibliotheque = [
   
     document.getElementById("stats").innerText = texte;
   }
-  
-  // ===============================
-  // 🔹 Ajouter un livre
-  // ===============================
+  //  Ajouter un livre
   const btnAjouter = document.getElementById("btnAjouter");
   btnAjouter.addEventListener("click", function() {
     window.open("ajouter-livre.html", "", "width=400,height=700");
@@ -122,35 +109,6 @@ let bibliotheque = [
   }
   window.fenetreAjouter = fenetreAjouter; // permet à la fenêtre ajouter.html d'appeler cette fonction
   
-  // ===============================
-  // 🔹 Recherche d'un livre
-  // ===============================
-  // const btnSearch = document.getElementById("btnSearch");
-  // btnSearch.addEventListener("click", rechercherLivre);
-  
-  // function rechercherLivre() {
-  //   const motCle = document.getElementById("searchInput").value.toLowerCase();
-  
-  //   if (motCle === "") {
-  //     afficherLivres();
-  //     return;//ykheraj mn lfunction hena ndir loop finma ydekhal chi haja khawya ygolih please entrer titre and try again;
-  //   }
-  
-  //   let resultat = [];
-  //   let i = 0;
-  //   while (i < bibliotheque.length) {
-  //     if (bibliotheque[i].titre.toLowerCase().includes(motCle)) {
-  //       resultat.push(bibliotheque[i]);
-  //     }
-  //     i++;
-  //   }
-  
-  //   if (resultat.length === 0) {
-  //     document.getElementById("catalogue").innerHTML = "<p>Aucun livre trouvé 😢</p>";
-  //   } else {
-  //     afficherLivres(resultat);
-  //   }
-  // }
   const btnnSearch = document.getElementById("btnSearch");
 btnnSearch.addEventListener("click", function() {
   const titreSearch = document.getElementById("searchInput").value.toLowerCase();
@@ -159,7 +117,6 @@ btnnSearch.addEventListener("click", function() {
     afficherLivres();
     return;
   }
-
   let resultat = [];
   let counter = 0;
   while (counter < bibliotheque.length) {
@@ -175,13 +132,4 @@ btnnSearch.addEventListener("click", function() {
     afficherLivres(resultat);
   }
 });
-
-
-  // ===============================
-  // 🔹 Chargement initial
-  // ===============================
   afficherLivres();
-
-
-
- 

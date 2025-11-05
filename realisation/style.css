@@ -1,58 +1,83 @@
-body {
-    font-family: "Poppins", "Segoe UI", sans-serif;
-    background-color: #f8f5f0;
-    color: #3e2f20;
+ body { 
+    background-image: url('image/watsp bib.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    color: #f0e6d2;
+    font-family: 'Georgia', serif;
     display: flex;
     flex-direction: column;
   }
-
+  
+  
   header {
-    background: linear-gradient(135deg, #d9c3a1, #f1e4c3);
+    background: rgba(25, 18, 10, 0.8);
     text-align: center;
-    padding: 1.5em;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border-bottom: 3px solid #c9a16e;
+    padding: 2em 1em;
+    border-bottom: 2px solid rgba(206, 168, 113, 0.5);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
   }
-
+  
   header h1 {
-    font-family: "Georgia", serif;
     letter-spacing: 2px;
-    color: #4a3520;
-    margin-bottom: 0.5em;
+    color: #f5deb3;
+    font-family: 'Merriweather', serif;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   }
-
+  
+ 
+  legend {
+    background-color: rgba(120, 90, 50, 0.8);
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 235, 200, 0.3);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  fieldset {
+    background-color: rgba(255, 250, 240, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1em;
+    margin-top: 1em;
+    backdrop-filter: blur(10px);
+  }
+  
+  
   input, button {
     font-size: 1em;
     padding: 0.6em 1em;
     border-radius: 8px;
-    border: 1px solid #cbb48d;
-    background: #fffaf3;
+    border: none;
     margin: 0.3em;
     transition: 0.3s;
   }
-
-  input:focus {
-    outline: none;
-    border-color: #b99665;
-    box-shadow: 0 0 5px rgba(185,150,101,0.4);
+  
+  input {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 215, 160, 0.3);
   }
-
   button {
-    background-color: #b99665;
-    color: white;
+    background-color: #c9a16e;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
-
+  
   button:hover {
-    background-color: #9c7e56;
+    background-color: #dcb67a;
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   }
-
+  
+  
   main {
     flex: 1;
     padding: 2em;
@@ -61,46 +86,37 @@ body {
     justify-content: center;
     gap: 1.5em;
   }
-
+  
   article {
-    background-color: #fffdf8;
-    border: 1px solid #e1d5c5;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 1.5em;
-    width: 250px;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
+    width: 260px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
   }
-
+  
   article:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
   }
-
+  
   article h3 {
-    margin-top: 0;
-    color: #704b28;
-    border-bottom: 2px solid #e4d0b0;
+    color: #f5deb3;
+    border-bottom: 2px solid rgba(245, 222, 179, 0.4);
     padding-bottom: 5px;
-    font-family: "Georgia", serif;
+    font-family: 'Merriweather', serif;
   }
-
+  
+  
   footer {
-    background-color: #f1e4c3;
-    color: #4d3b24;
-    padding: 1em;
+    background: rgba(20, 15, 8, 0.9);
+    color: #f5deb3;
+    padding: 1.2em;
     text-align: center;
-    border-top: 3px solid #c9a16e;
+    border-top: 2px solid rgba(206, 168, 113, 0.5);
     font-weight: bold;
-    letter-spacing: 0.5px;
-  }
-
-  /* ✨ Animation subtile */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  article {
-    animation: fadeIn 0.4s ease-in-out;
-  }
+    letter-spacing: 1px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  } 

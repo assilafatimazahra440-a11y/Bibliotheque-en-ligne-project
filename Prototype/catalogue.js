@@ -108,7 +108,7 @@ let bibliotheque = [
     afficherLivres();
   }
   window.fenetreAjouter = fenetreAjouter; // permet à la fenêtre ajouter.html d'appeler cette fonction
-  
+  // function rechercher
   const btnnSearch = document.getElementById("btnSearch");
 btnnSearch.addEventListener("click", function() {
   const titreSearch = document.getElementById("searchInput").value.toLowerCase();
@@ -127,7 +127,7 @@ btnnSearch.addEventListener("click", function() {
   }
 
   if (resultat.length === 0) {
-    document.getElementById("catalogue").innerHTML = "<p>Aucun livre trouvé 😢</p>";
+    document.getElementById("catalogue").innerHTML = "<p style = 'color: white'>Aucun livre trouvé 😢</p>";
   } else {
     afficherLivres(resultat);
   }
